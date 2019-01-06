@@ -16,3 +16,18 @@ def plot_dist(drop_threshold=0):
     df = data
     df = df[df['score'] >= drop_threshold]
     df['score'].hist(bins=20)
+
+def build_data(funny_threshold=50):
+    df = data
+    funnies = df[df['score'] >= funny_threshold]
+    funnies['label'] = 1
+    duds = df[df['score'] < funny_threshold]
+    duds['label'] = 0
+    
+    #downsample minority class
+    if (funnies.shape[0] < duds.shape[0]):
+        duds = duds.sample(funnies.shape[0])
+    else:
+        funnies = funnies.sample(duds.shape[0])
+    
+    return funnies.append(duds)
