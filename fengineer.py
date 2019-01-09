@@ -83,26 +83,26 @@ class Fengineer:
     def engineer_features(self, data):
         df_vec = self.vectorize_jokes(list(data['_joke']), data['_id'])
         
-        print('\n\VECT ::: VECT\n\n')
+       # print('\n\VECT ::: VECT\n\n')
         
-        print(df_vec.head())
-        print(df_vec.shape)
+        #print(df_vec.head())
+        #print(df_vec.shape)
         
-        print('\n\TF_IDF ::: TF_IDF\n\n')
+        #print('\n\TF_IDF ::: TF_IDF\n\n')
         
         df_filtered = self.filter_by_tf_idf(df_vec, int(self.tf_idf_rate*df_vec.shape[1]))
         
-        print(df_filtered.head())
-        print(df_filtered.shape)
+        #print(df_filtered.head())
+        #print(df_filtered.shape)
         
-        print('\n\PCA ::: PCA\n\n')
+        #print('\n\PCA ::: PCA\n\n')
         
         array_pca = self.perform_pca(df_filtered, n_components=self.pca_num)
         
         df_pca = pd.DataFrame(array_pca, index=df_filtered.index)
         
-        print(df_pca.head())
-        print(df_pca.shape)
+       # print(df_pca.head())
+       # print(df_pca.shape)
             
         df_labelled = pd.concat([df_pca, data['_label']], axis=1, join='inner')
         
