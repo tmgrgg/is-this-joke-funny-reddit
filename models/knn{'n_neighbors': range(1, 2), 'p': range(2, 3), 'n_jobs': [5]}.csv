@@ -1,0 +1,24 @@
+,0
+mean_fit_time,0.3780278205871582
+std_fit_time,0.033046969051328555
+mean_score_time,20.57233347892761
+std_score_time,0.7715342994566328
+param_n_jobs,5
+param_n_neighbors,1
+param_p,2
+params,"{'n_jobs': 5, 'n_neighbors': 1, 'p': 2}"
+split0_test_score,0.5789241135535181
+split1_test_score,0.5793194874060981
+split2_test_score,0.5762262483429077
+split3_test_score,0.5841343497956027
+split4_test_score,0.5757374875704342
+mean_test_score,0.5788682913895579
+std_test_score,0.0029905595145845263
+rank_test_score,1
+split0_train_score,0.9746174667182235
+split1_train_score,0.9728781727290303
+split2_train_score,0.9743695970392465
+split3_train_score,0.9744531595227574
+split4_train_score,0.9745360141405214
+mean_train_score,0.9741708820299557
+std_train_score,0.0006516172061141704
