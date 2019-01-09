@@ -76,6 +76,9 @@ class Fengineer:
         if n_components:        
             pca = PCA(n_components)
             pca.fit(df)
+            
+            #used for pca analysis
+            self.pca = pca
             return pca.transform(df)
         else:
             return df
