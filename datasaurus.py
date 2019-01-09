@@ -78,5 +78,6 @@ def transform_data(df, stem='stem', english=True):
         df['joke'] = df.apply(lambda row: untokenize(stem_joke(row['title'] + ' ' + row['body'], english)), axis=1)
 
     #add underscore to column names
+    df.index = df['id']
     df.columns = ['_' + x for x in list(df)]
     return df
